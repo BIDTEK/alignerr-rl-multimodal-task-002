@@ -82,7 +82,7 @@ export default function App() {
             />
             <KpiGrid kpis={kpisByRange[activeRange]} />
             <div className="dashboard-grid">
-              <AnalyticsCard data={chartSeriesByRange[activeRange]} />
+              <AnalyticsCard data={chartSeriesByRange[activeRange === '12m' ? '90d' : activeRange]} />
               <ActivityTable rows={activityRows} />
             </div>
           </>
